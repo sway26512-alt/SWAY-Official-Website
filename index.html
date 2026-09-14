@@ -1,0 +1,1854 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- 📱 MOBILE RESPONSIVE CHANGE: Makes the website use the phone's actual screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SWAY | Style, your way.</title>
+
+    <style>
+
+        /* 📱 MOBILE RESPONSIVE CHANGE: Prevents padding/borders from making elements wider than their space */
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* ==============================
+           PRODUCTS SECTION
+           ============================== */
+
+        .products {
+            padding: 40px 30px;
+            text-align: center;
+            background-color: rgb(245, 243, 238);
+        }
+
+        .products h2 {
+            margin-bottom: 30px;
+        }
+
+
+        /* ==============================
+           PRODUCT GRID
+           ============================== */
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1350px;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           PRODUCT CARD
+           ============================== */
+
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+
+        /* ==============================
+           PRODUCTS 1–39
+           ============================== */
+
+        .product-card img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* ==============================
+           PRODUCTS 40–62
+           SMALLER BATCH
+           ============================== */
+
+        .small-products {
+            padding-bottom: 15px;
+        }
+
+        .small-products img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* ==============================
+           PRODUCT NAME
+           ============================== */
+
+        .product-card h3 {
+            font-size: 20px;
+            margin: 15px 10px 8px;
+        }
+
+
+        /* ==============================
+           PRODUCT PRICE
+           ============================== */
+
+        .product-card p {
+            font-size: 17px;
+            margin: 5px;
+        }
+
+
+        /* ==============================
+           PRODUCT ORDER BUTTON
+           ============================== */
+
+        .product-order {
+            display: inline-block;
+            background-color: black;
+            color: #D4AF37;
+            padding: 9px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-order:hover {
+            background-color: #D4AF37;
+            color: black;
+        }
+
+
+        /* ==============================
+           HERO IMAGE
+           ============================== */
+
+        .hero {
+            background-image: url("hero image.png");
+
+            color: rgb(227, 171, 31);
+            padding: 26px;
+            margin-top: 26px;
+            height: 330px;
+            text-align: left;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        /* ==============================
+           WHATSAPP BUTTON
+           ============================== */
+
+        .whatsapp-btn {
+            float: right;
+            color: black;
+            background-color: #D4AF37;
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 5px 10px 0 0;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #F5F1E8;
+            color: black;
+        }
+
+
+        /* ==============================
+           LOGO
+           ============================== */
+
+        .logo p {
+            margin: 2px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .logo {
+            float: left;
+            display: block;
+            width: 160px;
+            height: 60px;
+            padding: 0;
+            margin: -5px 15px -5px 5px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* ==============================
+           NAVBAR
+           ============================== */
+
+        .navbar {
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 20px;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: #F5F1E8;
+            padding: 10px;
+        }
+
+        .navbar a:visited {
+            color: #B8860B;
+        }
+
+        .navbar a:hover {
+            color: #FFE5A0;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar ul {
+            text-decoration: none;
+            list-style: none;
+        }
+
+
+        /* ==============================
+           GENERAL TEXT
+           ============================== */
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+
+        /* ==========================================================
+           📱 MOBILE RESPONSIVE CHANGE
+           ========================================================== */
+
+        @media (max-width: 600px) {
+
+
+            /* 📱 Makes the navbar stop squeezing everything into one line */
+            .navbar {
+                overflow: visible;
+                text-align: center;
+                padding: 10px;
+            }
+
+
+            /* 📱 Makes the logo smaller on phones */
+            .logo {
+                float: none;
+                display: block;
+                width: 130px;
+                height: 50px;
+                margin: 0 auto 5px auto;
+            }
+
+
+            /* 📱 Makes the navigation links wrap properly */
+            .navbar ul {
+                padding: 0;
+                margin: 5px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 3px;
+            }
+
+
+            /* 📱 Stops navigation items from floating and squeezing */
+            .navbar li {
+                float: none;
+            }
+
+
+            /* 📱 Makes navbar links smaller and easier to fit */
+            .navbar a {
+                font-size: 15px;
+                padding: 7px 6px;
+            }
+
+
+            /* 📱 Moves WhatsApp button below the navigation */
+            .whatsapp-btn {
+                float: none;
+                display: inline-block;
+                margin: 8px auto 2px auto;
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+
+
+            /* 📱 Makes the hero shorter on a phone */
+            .hero {
+                height: 220px;
+                padding: 15px;
+                margin-top: 15px;
+                background-position: center;
+            }
+
+
+            /* 📱 Gives the collection section less side padding */
+            .products {
+                padding: 30px 12px;
+            }
+
+
+            /* 📱 Makes the collection heading fit the phone */
+            .products h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+
+            /* 📱 IMPORTANT:
+               4 columns on desktop → 2 columns on phone
+               This prevents the product cards from becoming squeezed */
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                width: 100%;
+            }
+
+
+            /* 📱 Makes product images fit their cards */
+            .product-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+
+            /* 📱 Makes the smaller batch images fit too */
+            .small-products img {
+                width: 100%;
+                height: 210px;
+                object-fit: cover;
+            }
+
+
+            /* 📱 Makes product names readable without taking too much space */
+            .product-card h3 {
+                font-size: 16px;
+                margin: 12px 5px 6px;
+            }
+
+
+            /* 📱 Makes prices fit comfortably */
+            .product-card p {
+                font-size: 14px;
+                margin: 5px 3px;
+            }
+
+
+            /* 📱 Makes the WhatsApp buttons fit inside each product card */
+            .product-order {
+                font-size: 12px;
+                padding: 9px 7px;
+                margin-top: 8px;
+                max-width: calc(100% - 10px);
+            }
+
+
+            /* 📱 Makes general headings smaller */
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVBAR
+         ============================== -->
+
+    <nav class="navbar">
+
+        <a href="home.html" class="logo">
+
+            <img src="logo SWAY.jpg" alt="SWAY Logo">
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+
+            <li>
+                <a href="earrings.html">Earrings</a>
+            </li>
+
+            <li>
+                <a href="pins.html">Pins</a>
+            </li>
+
+            <li>
+                <a href="clips.html">Clips</a>
+            </li>
+
+            <li>
+                <a href="full sets.html">Full Sets</a>
+            </li>
+
+        </ul>
+
+
+        <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20place%20an%20order."
+            class="whatsapp-btn"
+            target="_blank">
+
+            Order on WhatsApp
+
+        </a>
+
+    </nav>
+
+
+    <!-- ==============================
+         HERO
+         ============================== -->
+
+    <section class="hero">
+
+    </section>
+
+
+    <!-- ==============================
+         OUR COLLECTIONS
+         ============================== -->
+
+    <section class="products">
+
+        <h2>Our Collections</h2>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 01 -->
+
+            <div class="product-card">
+
+                <img src="gold flower.jpg"
+                    alt="Product 01">
+
+                <h3>Gold Flower</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Flower."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 02 -->
+
+            <div class="product-card">
+
+                <img src="gold angel.png"
+                    alt="Product 02">
+
+                <h3>Gold Angel</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Angel."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 03 -->
+
+            <div class="product-card">
+
+                <img src="gold bow (1).png"
+                    alt="Product 03">
+
+                <h3>Gold Bow</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Bow."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 04 -->
+
+            <div class="product-card">
+
+                <img src="gold butterfly.png"
+                    alt="Product 04">
+
+                <h3>Gold Butterfly</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Butterfly."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 05 -->
+
+            <div class="product-card">
+
+                <img src="gold crown.png"
+                    alt="Product 05">
+
+                <h3>Gold Crown</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Crown."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 06 -->
+
+            <div class="product-card">
+
+                <img src="gold diamond.jpeg"
+                    alt="Product 06">
+
+                <h3>Gold Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 07 -->
+
+            <div class="product-card">
+
+                <img src="gold drop (1).jpg"
+                    alt="Product 07">
+
+                <h3>Gold Drop</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Drop."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 08 -->
+
+            <div class="product-card">
+
+                <img src="gold flower.jpg"
+                    alt="Product 08">
+
+                <h3>Gold Flower</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Flower."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 09 -->
+
+            <div class="product-card">
+
+                <img src="gold goat.png"
+                    alt="Product 09">
+
+                <h3>Gold Goat</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Goat."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 10 -->
+
+            <div class="product-card">
+
+                <img src="gold heart.png"
+                    alt="Product 10">
+
+                <h3>Gold Heart</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Heart."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 11 -->
+
+            <div class="product-card">
+
+                <img src="gold log.jpg"
+                    alt="Product 11">
+
+                <h3>Gold Log</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Log."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 12 -->
+
+            <div class="product-card">
+
+                <img src="gold markhor.jpg"
+                    alt="Product 12">
+
+                <h3>Gold Markhor</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/9233344554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Markhor."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 13 -->
+
+            <div class="product-card">
+
+                <img src="gold antler.jpg"
+                    alt="Product 13">
+
+                <h3>Golden Markhor</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Golden%20Markhor."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 14 -->
+
+            <div class="product-card">
+
+                <img src="puzzu gold.jpeg"
+                    alt="Product 14">
+
+                <h3>Puzzu Gold</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Puzzu%20Gold."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 15 -->
+
+            <div class="product-card">
+
+                <img src="gold music (1).png"
+                    alt="Product 15">
+
+                <h3>Gold Music</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Music."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 16 -->
+
+            <div class="product-card">
+
+                <img src="gold rectangle.jpg"
+                    alt="Product 16">
+
+                <h3>Gold Rectangle</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Rectangle."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 17 -->
+
+            <div class="product-card">
+
+                <img src="gold triangle.jpeg"
+                    alt="Product 17">
+
+                <h3>Gold Triangle</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Triangle."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 18 -->
+
+            <div class="product-card">
+
+                <img src="bright big.png"
+                    alt="Product 18">
+
+                <h3>Bright Big</h3>
+
+                <p>Rs. 600 (discounted price)</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Bright%20Big."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 19 -->
+
+            <div class="product-card">
+
+                <img src="gold smile.png"
+                    alt="Product 19">
+
+                <h3>Gold Smile</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Smile."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 20 -->
+
+            <div class="product-card">
+
+                <img src="gold star.jpg"
+                    alt="Product 20">
+
+                <h3>Gold Star</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Star."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 21 -->
+
+            <div class="product-card">
+
+                <img src="gold star.jpg"
+                    alt="Product 21">
+
+                <h3>Gold Star</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Gold%20Star."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 22 -->
+
+            <div class="product-card">
+
+                <img src="blue diamond.jpg"
+                    alt="Product 22">
+
+                <h3>Blue Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 23 -->
+
+            <div class="product-card">
+
+                <img src="d-blue diamond.jpg"
+                    alt="Product 23">
+
+                <h3>Dark Blue Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Dark%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 24 -->
+
+            <div class="product-card">
+
+                <img src="yellow diamond.jpeg"
+                    alt="Product 24">
+
+                <h3>Yellow Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Yellow%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 25 -->
+
+            <div class="product-card">
+
+                <img src="white diamond.jpeg"
+                    alt="Product 25">
+
+                <h3>White Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20White%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 26 -->
+
+            <div class="product-card">
+
+                <img src="s yellow diamond.jpeg"
+                    alt="Product 26">
+
+                <h3>Yellow Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Yellow%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 27 -->
+
+            <div class="product-card">
+
+                <img src="red diamond (2).jpeg"
+                    alt="Product 27">
+
+                <h3>Red Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Red%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 28 -->
+
+            <div class="product-card">
+
+                <img src="pink diamond.jpg"
+                    alt="Product 28">
+
+                <h3>Pink Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Pink%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 29 -->
+
+            <div class="product-card">
+
+                <img src="blueberry.jpg"
+                    alt="Product 29">
+
+                <h3>Blueberry</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Blueberry."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 30 -->
+
+            <div class="product-card">
+
+                <img src="cherry.jpg"
+                    alt="Product 30">
+
+                <h3>Cherry</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Cherry."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 31 -->
+
+            <div class="product-card">
+
+                <img src="stopper gold.jpeg"
+                    alt="Product 31">
+
+                <h3>Stopper Gold</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Stopper%20Gold."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 32 -->
+
+            <div class="product-card">
+
+                <img src="watermelon.jpeg"
+                    alt="Product 32">
+
+                <h3>Watermelon</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Watermelon."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 33 -->
+
+            <div class="product-card">
+
+                <img src="strwaberry.jpeg"
+                    alt="Product 33">
+
+                <h3>Strwaberry</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Strwaberry."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 34 -->
+
+            <div class="product-card">
+
+                <img src="pink straw.jpg"
+                    alt="Product 34">
+
+                <h3>Pink Straw</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Pink%20Straw."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+            </a>
+
+            </div>
+
+
+            <!-- PRODUCT 35 -->
+
+            <div class="product-card">
+
+                <img src="white peach.jpg"
+                    alt="Product 35">
+
+                <h3>White Peach</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20White%20Peach."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 36 -->
+
+            <div class="product-card">
+
+                <img src="yellow fruit.jpg"
+                    alt="Product 36">
+
+                <h3>Yellow Fruit</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Yellow%20Fruit."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 37 -->
+
+            <div class="product-card">
+
+                <img src="grapes.png"
+                    alt="Product 37">
+
+                <h3>Grapes</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Grapes."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 38 -->
+
+            <div class="product-card">
+
+                <img src="loli.jpeg"
+                    alt="Product 38">
+
+                <h3>Loli</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Loli."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 39 -->
+
+            <div class="product-card">
+
+                <img src="peach.jpeg"
+                    alt="Product 39">
+
+                <h3>Peach</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Peach."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 40 -->
+
+            <div class="product-card small-products">
+
+                <img src="pineapple.jpeg"
+                    alt="Product 40">
+
+                <h3>Pineapple</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Pineapple."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 41 -->
+
+            <div class="product-card small-products">
+
+                <img src="s white diamond.png"
+                    alt="Product 41">
+
+                <h3>Small White Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20White%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 42 -->
+
+            <div class="product-card small-products">
+
+                <img src="s blue diamond.jpeg"
+                    alt="Product 42">
+
+                <h3>Small Blue Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 43 -->
+
+            <div class="product-card small-products">
+
+                <img src="s yellow diamond.jpeg"
+                    alt="Product 43">
+
+                <h3>Small Yellow Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Yellow%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 44 -->
+
+            <div class="product-card small-products">
+
+                <img src="pink diamond.jpg"
+                    alt="Product 44">
+
+                <h3>Small Pink Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Pink%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 45 -->
+
+            <div class="product-card small-products">
+
+                <img src="s red diamond.png"
+                    alt="Product 45">
+
+                <h3>Small Red Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Red%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 46 -->
+
+            <div class="product-card small-products">
+
+                <img src="s orange diamond.png"
+                    alt="Product 46">
+
+                <h3>Small Orange Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Orange%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 47 -->
+
+            <div class="product-card small-products">
+
+                <img src="s blue diamond.jpeg"
+                    alt="Product 47">
+
+                <h3>Small Blue Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 48 -->
+
+            <div class="product-card small-products">
+
+                <img src="small blue diamond.jpeg"
+                    alt="Product 48">
+
+                <h3>Small Blue Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 49 -->
+
+            <div class="product-card small-products">
+
+                <img src="s green diamond.png"
+                    alt="Product 49">
+
+                <h3>Small Green Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Green%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 50 -->
+
+            <div class="product-card small-products">
+
+                <img src="s lilac diamond.png"
+                    alt="Product 50">
+
+                <h3>Small Lilac Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Lilac%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 51 -->
+
+            <div class="product-card small-products">
+
+                <img src="brown diamond.jpg"
+                    alt="Product 51">
+
+                <h3>Brown Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Brown%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 52 -->
+
+            <div class="product-card small-products">
+
+                <img src="s whitei diamond.png"
+                    alt="Product 52">
+
+                <h3>Small Whitei Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Whitei%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 53 -->
+
+            <div class="product-card small-products">
+
+                <img src="s redi diamond.jpeg"
+                    alt="Product 53">
+
+                <h3>Small Redi Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Redi%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 54 -->
+
+            <div class="product-card small-products">
+
+                <img src="s d blue diamond.jpeg"
+                    alt="Product 54">
+
+                <h3>Small Dark Blue Diamond</h3>
+
+                <p>Rs. 140</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Small%20Dark%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 55 -->
+
+            <div class="product-card small-products">
+
+                <img src="white diamond 2.jpeg"
+                    alt="Product 55">
+
+                <h3>White Diamond 2</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20White%20Diamond%202."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 56 -->
+
+            <div class="product-card small-products">
+
+                <img src="green diamond.jpeg"
+                    alt="Product 56">
+
+                <h3>Green Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Green%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 57 -->
+
+            <div class="product-card small-products">
+
+                <img src="red diamond (2).jpeg"
+                    alt="Product 57">
+
+                <h3>Red Diamond 2</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Red%20Diamond%202."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 58 -->
+
+            <div class="product-card small-products">
+
+                <img src="b blue diamond.png"
+                    alt="Product 58">
+
+                <h3>B Blue Diamond</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20B%20Blue%20Diamond."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 59 -->
+
+            <div class="product-card small-products">
+
+                <img src="bright small.jpeg"
+                    alt="Product 59">
+
+                <h3>Bright Small</h3>
+
+                <p>Rs. 500 (Discounted Price)</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Bright%20Small."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 60 -->
+
+            <div class="product-card small-products">
+
+                <img src="decent one.jpeg"
+                    alt="Product 60">
+
+                <h3>Decent One</h3>
+
+                <p>Rs.550 (Discounted Price)</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Decent%20One."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 61 -->
+
+            <div class="product-card small-products">
+
+                <img src="whole small.jpeg"
+                    alt="Product 61">
+
+                <h3>Whole Small</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Whole%20Small."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCT 62 -->
+
+            <div class="product-card small-products">
+
+                <img src="YOUR-IMAGE-URL-62"
+                    alt="Product 62">
+
+                <h3>Product Name 62</h3>
+
+                <p>Rs. 150</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Product%20Name%2062."
+                    class="product-order"
+                    target="_blank">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
