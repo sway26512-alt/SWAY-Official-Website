@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SWAY - Full Sets</title>
+
+    <style>
+
+        /* ==============================
+           GENERAL
+           ============================== */
+
+        /* MOBILE CHANGE */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 243, 238);
+            color: black;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+
+        /* ==============================
+           NAVBAR
+           ============================== */
+
+        .navbar {
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            padding: 10px;
+            font-size: 20px;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .logo {
+            float: left;
+            display: block;
+            width: 160px;
+            height: 60px;
+            padding: 0;
+            margin: -5px 15px -5px 5px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .navbar ul {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            color: #F5F1E8;
+            padding: 10px;
+        }
+
+        .navbar a:visited {
+            color: #B8860B;
+        }
+
+        .navbar a:hover {
+            color: #FFE5A0;
+        }
+
+        .whatsapp-btn {
+            float: right;
+            color: black;
+            background-color: #D4AF37;
+            padding: 10px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 5px 10px 0 0;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #F5F1E8;
+            color: black;
+        }
+
+
+        /* ==============================
+           HERO
+           ============================== */
+
+        .hero {
+            background-image: url("full set hero.png");
+            color: rgb(227, 171, 31);
+            padding: 26px;
+            margin-top: 26px;
+            height: 330px;
+            text-align: left;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        /* ==============================
+           FULL SETS PRODUCTS
+           ============================== */
+
+        .products {
+            padding: 40px 30px;
+            text-align: center;
+            background-color: rgb(245, 243, 238);
+        }
+
+        .products h2 {
+            margin-bottom: 30px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1350px;
+            margin: auto;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin: 15px 10px 8px;
+        }
+
+        .product-card p {
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        .product-order {
+            display: inline-block;
+            background-color: black;
+            color: #D4AF37;
+            padding: 9px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-order:hover {
+            background-color: #D4AF37;
+            color: black;
+        }
+
+
+        /* ==============================
+           FOOTER
+           ============================== */
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+
+        /* ==============================
+           MOBILE RESPONSIVE
+           ============================== */
+
+        /* MOBILE CHANGE */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                overflow: visible;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .logo {
+                float: none;
+                display: block;
+                width: 130px;
+                height: 50px;
+                margin: 0 auto 5px auto;
+            }
+
+            .navbar ul {
+                padding: 0;
+                margin: 5px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 3px;
+            }
+
+            .navbar li {
+                float: none;
+            }
+
+            .navbar a {
+                font-size: 15px;
+                padding: 7px 6px;
+            }
+
+            .whatsapp-btn {
+                float: none;
+                display: inline-block;
+                margin: 8px auto 2px auto;
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .hero {
+                height: 220px;
+                padding: 15px;
+                margin-top: 15px;
+                background-position: center;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .products {
+                padding: 30px 12px;
+            }
+
+            .products h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                width: 100%;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .product-card img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .product-card h3 {
+                font-size: 16px;
+                margin: 12px 5px 6px;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .product-card p {
+                font-size: 14px;
+                margin: 5px 3px;
+            }
+
+
+            /* MOBILE CHANGE */
+
+            .product-order {
+                font-size: 12px;
+                padding: 9px 7px;
+                margin-top: 8px;
+                max-width: calc(100% - 10px);
+            }
+
+
+            /* MOBILE CHANGE */
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+         ============================== -->
+
+    <nav class="navbar">
+
+        <a href="home.html" class="logo">
+            <img src="logo SWAY.jpg" alt="SWAY Logo">
+        </a>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="earrings.html">Earrings</a></li>
+            <li><a href="pins.html">Pins</a></li>
+            <li><a href="clips.html">Clips</a></li>
+            <li><a href="fullsets.html">Full Sets</a></li>
+        </ul>
+
+        <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20place%20an%20order%20from%20SWAY."
+           class="whatsapp-btn"
+           target="_blank">
+            Order on WhatsApp
+        </a>
+
+    </nav>
+
+
+    <!-- ==============================
+         HERO
+         ============================== -->
+
+    <section class="hero">
+    </section>
+
+
+    <!-- ==============================
+         FULL SETS
+         ============================== -->
+
+    <section class="products">
+
+        <h2>Full Sets</h2>
+
+        <div class="product-grid">
+
+
+            <!-- Product 1 -->
+
+            <div class="product-card">
+
+                <img src="Berry Clips Set.jpg"
+                     alt="Berry Clips Set">
+
+                <h3>Berry Clips Set</h3>
+
+                <p>Rs. 490 (Discounted Price)</p>
+
+                <p>7 piece set</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Berry%20Clips%20Set."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="product-card">
+
+                <img src="Beerry Earring Set.jpg"
+                     alt="Berry Earring Set">
+
+                <h3>Berry Earring Set</h3>
+
+                <p>Rs. 2000 (Discounted Price)</p>
+
+                <p>24 piece set</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Berry%20Earring%20Set."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="product-card">
+
+                <img src="Berry Clips.jpg"
+                     alt="Berry Clips">
+
+                <h3>Berry Clips</h3>
+
+                <p>Rs. 70 per piece</p>
+
+                <p>Single piece</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Berry%20Clips."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="product-card">
+
+                <img src="Purple Pins Set.jpeg"
+                     alt="Purple Pins Set">
+
+                <h3>Purple Pins Set</h3>
+
+                <p>Rs. 490 (Discounted Price)</p>
+
+                <p>14 piece set</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Purple%20Pins%20Set."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- Product 5 -->
+
+            <div class="product-card">
+
+                <img src="Yellow Pins Set.jpeg"
+                     alt="Yellow Pins Set">
+
+                <h3>Yellow Pins Set</h3>
+
+                <p>Rs. 490 (Discounted Price)</p>
+
+                <p>14 piece set</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Yellow%20Pins%20Set."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+            <!-- Product 6 -->
+
+            <div class="product-card">
+
+                <img src="Hair Band Set.jpg"
+                     alt="Hair Tie Set">
+
+                <h3>Hair Tie Set</h3>
+
+                <p>Rs. 300</p>
+
+                <a href="https://wa.me/923334554075?text=Hi%21%20I%27d%20like%20to%20order%20the%20Hair%20Tie%20Set."
+                   class="product-order"
+                   target="_blank">
+                    Order on WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+
+    <footer>
+        <p>© 2026 SWAY. Style, your way.</p>
+    </footer>
+
+
+</body>
+
+</html>
